@@ -1,0 +1,65 @@
+<!doctype html>
+<!--
+# 
+# HUNT!
+# Designed by RocketHcgs.
+# Powered by Baidu,Google.
+# License MIT.
+# 
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="theme-color" content="#f8a240">
+    <meta name="keywords" content="HUNT,RHW">
+    <meta name="description" content="HUNT!">
+    <title>HUNT!</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="js.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="letter wave" style="color:#4286f4">H</div><div class="letter wave">U</div><div class="letter wave">N</div><div class="letter wave">T</div><div class="letter wave" style="color:#ff4200">!</div>
+      </div>
+      <div id="bgbtn" onclick="bgChanger()">
+        <span class="fa-stack" title="改变背景图~">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-image fa-stack-1x fa-inverse"></i>
+        </span>
+      </div>
+      <div id="clbtn" onclick="colorChanger()">
+      	<span class="fa-stack" title="改变颜色~">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-adjust fa-stack-1x fa-inverse"></i>
+        </span>
+      </div>
+      <div id="bgchanger">
+      	<input class="textarea" id="bgurl" type="url" placeholder="输入背景图网址或拖动背景图到此处..." onchange="changeBackground()">
+      </div>
+      <div id="colorchanger">
+        <ul class="list">
+          <li><label for="bgcolor1">左边颜色</label></li>
+          <li><input type="color" id="bgcolor1" value="#f76b1d" onchange="changeColor()"></li>
+          <li><label for="bgcolor2">右边颜色</label></li>
+          <li><input type="color" id="bgcolor2" value="#fad961" onchange="changeColor()"></li>
+          <li><input type="button" id="setdefault" value="默认" onclick="setDefault()"></li>
+        </ul>
+      </div>
+      <div class="content">
+        <form action="https://www.baidu.com/s" method="get">
+          <input class="textarea" type="text" name="wd" autocomplete="off" autofocus placeholder="Hunt for...">
+          <input type="hidden" name="ie" value="utf-8">
+          <div class="btn-box">
+            <input class="button" type="submit" value="百度搜索">
+            <input class="button" type="button" value="Google 搜索" onclick="doGoogle()">
+          </div>
+        </form>
+      </div>
+      <div class="footer">Designed with <i class="fa fa-heart" style="color:#dc143c"></i> by <a href="http://rockethcgs.me/" target="_blank">RocketHcgs</a>.</div>
+    </div>
+  </body>
+</html>
