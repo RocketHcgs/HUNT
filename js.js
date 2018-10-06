@@ -124,4 +124,19 @@ window.onload = function() {
 	        }
 	    }
 	});
+	document.getElementById('heart').addEventListener('mouseover', function () {
+		this.classList.add('animated', 'rubberBand');
+	})
+
+	document.getElementById('heart').addEventListener('mouseout', function () {
+		this.classList.remove('animated', 'rubberBand');
+	})
+
+	document.getElementById('author').addEventListener('mouseover', function () {
+		this.classList.add('animated', 'tada');
+	})
+
+	document.getElementById('author').addEventListener('mouseout', function () {
+		this.classList.remove('animated', 'tada');
+	})
 }
