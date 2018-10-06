@@ -36,6 +36,10 @@ a:focus,a:hover {
 	color:#dedede;
 	text-decoration:underline
 }
+
+a.name:hover {
+	animation: tada;
+}
 .container {
 	width:100%;
 	text-align:center;
