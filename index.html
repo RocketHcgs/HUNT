@@ -38,6 +38,12 @@
           <i class="fa fa-adjust fa-stack-1x fa-inverse"></i>
         </span>
       </div>
+      <div id="enginebtn" onclick="engineChanger()">
+          <span class="fa-stack" title="更换默认搜索引擎~">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-search fa-stack-1x fa-inverse"></i>
+          </span>
+      </div>
       <div id="bgchanger">
       	<input class="textarea" id="bgurl" type="url" placeholder="输入背景图网址或拖动背景图到此处..." onchange="changeBackground()">
       </div>
@@ -49,6 +55,20 @@
           <li><input type="color" id="bgcolor2" value="#fad961" onchange="changeColor()"></li>
           <li><input type="button" id="setdefault" value="默认" onclick="setDefault()"></li>
         </ul>
+      </div>
+      <div id="enginechanger">
+        <div style="padding: 10px">
+            <span>
+                按下回车时，使用
+                <select id="defaultEngine" onchange="setDefaultEngine(this.value)">
+                  <option value="baidu">百度</option>
+                  <option value="google">Google</option>
+                  <option value="bing">Bing</option>
+                  <option value="duckduckgo">DuckDuckGo</option>
+                </select>
+                进行搜索
+            </span>
+        </div>
       </div>
       <div class="content">
         <input id="textSearch" class="textarea" type="text" autocomplete="off" autofocus placeholder="Hunt for...">

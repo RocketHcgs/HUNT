@@ -4,6 +4,10 @@
  * License MIT
  */
 
+//获取默认搜索引擎
+var defaultEngine = getCookie("defaultEngine");
+if (defaultEngine == "") defaultEngine = "baidu";
+
 function setCookie(c_name, value, expiredays) {
 	var exdate = new Date();
 	exdate.setDate(exdate.getDate() + expiredays)
@@ -66,6 +70,17 @@ function colorChanger() {
 		colorChangerStat = false;
 	}
 }
+//显示/隐藏默认搜索引擎改变器
+var engineChangerStat = false;
+function engineChanger() {
+	if (engineChangerStat == false) {
+		document.getElementById("enginechanger").style.display = "block";
+		engineChangerStat = true;
+	} else {
+		document.getElementById("enginechanger").style.display = "none";
+		engineChangerStat = false;
+	}
+}
 //改变背景图
 function changeBackground() {
 	var bgURL = document.getElementById("bgurl").value;
@@ -96,6 +111,12 @@ function changeColor() {
 	setCookie("bgColor1", bgColor1, 180);
 	setCookie("bgColor2", bgColor2, 180);
 }
+
+//设置默认引擎
+function setDefaultEngine(engine) {
+	defaultEngine = engine;
+	setCookie("defaultEngine", engine, 180);
+}
 //设为默认颜色
 function setDefault() {
 	document.body.style = "background:linear-gradient(to right,#f76b1d,#fad961);";
@@ -105,6 +126,10 @@ function setDefault() {
 }
 
 window.onload = function () {
+
+	//设置默认搜索引擎
+	document.getElementById('defaultEngine').value = defaultEngine;
+
 	//背景颜色读取
 	if (getCookie("bgColor1") != "") {
 		var bgColor1 = getCookie("bgColor1");
@@ -128,15 +153,19 @@ window.onload = function () {
 	//关闭bgChanger和colorChanger的操作
 	var bgButtonObj = document.getElementById("bgbtn");
 	var colorButtonObj = document.getElementById("clbtn");
+	var engineButtonObj = document.getElementById("enginebtn");
 	var bgChangerObj = document.getElementById("bgchanger");
 	var colorChangerObj = document.getElementById("colorchanger");
+	var engineChangerObj = document.getElementById("enginechanger");
 	document.body.addEventListener('click', function (e) {
-		if (e.target !== bgButtonObj && e.target != colorButtonObj && e.target != bgChangerObj && e.target != colorChangerObj) {
-			if (!bgButtonObj.contains(e.target) && !colorButtonObj.contains(e.target) && !bgChangerObj.contains(e.target) && !colorChangerObj.contains(e.target)) {
+		if (e.target !== bgButtonObj && e.target != colorButtonObj && e.target != bgChangerObj && e.target != colorChangerObj && e.target != engineButtonObj && e.target != engineChangerObj) {
+			if (!bgButtonObj.contains(e.target) && !colorButtonObj.contains(e.target) && !bgChangerObj.contains(e.target) && !colorChangerObj.contains(e.target) && !engineButtonObj.contains(e.target) && !engineChangerObj.contains(e.target)) {
 				bgChangerStat = true;
 				colorChangerStat = true;
+				engineChangerStat = true;
 				bgChanger();
 				colorChanger();
+				engineChanger();
 			}
 		}
 	});
@@ -154,5 +183,12 @@ window.onload = function () {
 
 	document.getElementById('author').addEventListener('mouseout', function () {
 		this.classList.remove('animated', 'tada');
+	})
+
+	document.getElementById('textSearch').addEventListener("keydown", function(event) {
+		if(event.keyCode === 13){
+			event.preventDefault();
+			doSearch(defaultEngine);
+		}
 	})
 }
