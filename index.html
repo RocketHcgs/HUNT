@@ -51,14 +51,11 @@
         </ul>
       </div>
       <div class="content">
-        <form action="https://www.baidu.com/s" method="get">
-          <input class="textarea" type="text" name="wd" autocomplete="off" autofocus placeholder="Hunt for...">
-          <input type="hidden" name="ie" value="utf-8">
-          <div class="btn-box">
-            <input class="button" type="submit" value="百度搜索">
-            <input class="button" type="button" value="Google 搜索" onclick="doGoogle()">
-          </div>
-        </form>
+        <input id="textSearch" class="textarea" type="text" autocomplete="off" autofocus placeholder="Hunt for...">
+        <div class="btn-box">
+          <button id="baidu" class="button" onclick="doSearch(this.id)">百度搜索</button>
+          <button id="google" class="button" onclick="doSearch(this.id)">Google 搜索</button>
+        </div>
       </div>
       <div class="footer">Designed with <i id="heart" class="fa fa-heart" style="color:#dc143c"></i> by <a style="display: inline-block;" id="author" href="https://rockethcgs.me/" target="_blank">RocketHcgs</a>.</div>
     </div>
