@@ -23,10 +23,19 @@ function getCookie(c_name) {
 	}
 	return "";
 }
-//Google搜索
-function doGoogle() {
-	var hunt = document.getElementsByName("wd")[0].value;
-	location.href="https://www.google.com/search?q="+hunt;
+//执行搜索
+function doSearch(engine) {
+	var hunt = encodeURIComponent(document.getElementById('textSearch').value);
+	switch (engine) {
+		case 'baidu':
+			location.href = "https://www.baidu.com/s?wd="+hunt;
+			break;
+		case 'google':
+			location.href = "https://www.google.com/search?q="+hunt;
+		default:
+			break;
+	}
+
 }
 //显示/隐藏背景图改变器
 var bgChangerStat = false;
