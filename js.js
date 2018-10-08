@@ -32,6 +32,13 @@ function doSearch(engine) {
 			break;
 		case 'google':
 			location.href = "https://www.google.com/search?q=" + hunt;
+			break;
+		case 'bing':
+			location.href = "https://www.bing.com/search?q=" + hunt;
+			break;
+		case 'duckduckgo':
+			location.href = "https://duckduckgo.com/?q=" + hunt;
+			break;
 		default:
 			break;
 	}
