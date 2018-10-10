@@ -124,19 +124,20 @@ window.onload = function() {
 	        }
 	    }
 	});
+	//心形符号的变化
 	document.getElementById('heart').addEventListener('mouseover', function () {
-		this.classList.add('animated', 'rubberBand');
+		this.classList.add('rubberBand');
 	})
 
 	document.getElementById('heart').addEventListener('mouseout', function () {
-		this.classList.remove('animated', 'rubberBand');
+		this.classList.remove('rubberBand');
 	})
 
 	document.getElementById('author').addEventListener('mouseover', function () {
-		this.classList.add('animated', 'tada');
+		this.classList.add('tada');
 	})
 
 	document.getElementById('author').addEventListener('mouseout', function () {
-		this.classList.remove('animated', 'tada');
+		this.classList.remove('tada');
 	})
 }
