@@ -37,6 +37,12 @@
           <i class="fa fa-adjust fa-stack-1x fa-inverse"></i>
         </span>
       </div>
+      <div id="enginebtn" onclick="engineChanger()">
+          <span class="fa-stack" title="更换默认搜索引擎~">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-search fa-stack-1x fa-inverse"></i>
+          </span>
+      </div>
       <div id="bgchanger">
       	<input class="textarea" id="bgurl" type="url" placeholder="输入背景图网址或拖动背景图到此处..." onchange="changeBackground()">
       </div>
@@ -49,15 +55,24 @@
           <li><input type="button" id="setdefault" value="默认" onclick="setDefault()"></li>
         </ul>
       </div>
+      <div id="enginechanger">
+        <div style="padding: 10px">
+            <span>
+                按下回车时，使用
+                <select id="defaultEngine" onchange="setDefaultEngine(this.value)">
+                  <option value="baidu">百度</option>
+                  <option value="google">Google</option>
+                </select>
+                进行搜索
+            </span>
+        </div>
+      </div>
       <div class="content">
-        <form action="https://www.baidu.com/s" method="get">
-          <input class="textarea" type="text" name="wd" autocomplete="off" autofocus placeholder="Hunt for...">
-          <input type="hidden" name="ie" value="utf-8">
-          <div class="btn-box">
-            <input class="button" type="submit" value="百度搜索">
-            <input class="button" type="button" value="Google 搜索" onclick="doGoogle()">
-          </div>
-        </form>
+        <input id="textSearch" class="textarea" type="text" autocomplete="off" autofocus placeholder="Hunt for...">
+        <div class="btn-box">
+          <button id="baidu" class="button" onclick="doSearch(this.id)">百度搜索</button>
+          <button id="google" class="button" onclick="doSearch(this.id)">Google 搜索</button>
+        </div>
       </div>
       <div class="footer">Designed with <i id="heart" class="fa fa-heart" style="color:#dc143c"></i> by <a style="display: inline-block;" id="author" href="https://rockethcgs.me/" target="_blank">RocketHcgs</a>.</div>
     </div>

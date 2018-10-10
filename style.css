@@ -6,16 +6,40 @@
 
 
 @-webkit-keyframes wave {
-	0%		{-webkit-transform:translate(0,0); transform:translate(0,0); }
-	20%		{-webkit-transform:translate(0,-20px); transform:translate(0,-20px); }
-	40%		{-webkit-transform:translate(0,0); transform:translate(0,0); }
-	100%	{-webkit-transform:translate(0,0); transform:translate(0,0); }
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  20% {
+    -webkit-transform: translate(0, -20px);
+    transform: translate(0, -20px);
+  }
+  40% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }
 @keyframes wave {
-	0%		{-webkit-transform:translate(0,0); transform:translate(0,0); }
-	20%		{-webkit-transform:translate(0,-20px); transform:translate(0,-20px); }
-	40%		{-webkit-transform:translate(0,0); transform:translate(0,0); }
-	100%	{-webkit-transform:translate(0,0); transform:translate(0,0); }
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  20% {
+    -webkit-transform: translate(0, -20px);
+    transform: translate(0, -20px);
+  }
+  40% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }
 /*
  * Animate tada by Daniel Eden
@@ -158,50 +182,51 @@
   }
 }
 html {
-	height:100%;
+  height: 100%;
 }
 body {
-	height:100%;
-    overflow:hidden;
-	font-family:微软雅黑,Arial,sans-serif;
-	background:-webkit-linear-gradient(left,#f76b1d,#fad961);
-	background:-moz-linear-gradient(right,#f76b1d,#fad961);
-	background:-o-linear-gradient(right,#f76b1d,#fad961);
-	background:linear-gradient(to right,#f76b1d,#fad961);
+  height: 100%;
+  overflow: hidden;
+  font-family: 微软雅黑, Arial, sans-serif;
+  background: -webkit-linear-gradient(left, #f76b1d, #fad961);
+  background: -moz-linear-gradient(right, #f76b1d, #fad961);
+  background: -o-linear-gradient(right, #f76b1d, #fad961);
+  background: linear-gradient(to right, #f76b1d, #fad961);
 }
 a {
-	color:#fefefe;
-	text-decoration:none
+  color: #fefefe;
+  text-decoration: none;
 }
-a:focus,a:hover {
-	color:#dedede;
-	text-decoration:underline
+a:focus,
+a:hover {
+  color: #dedede;
+  text-decoration: underline;
 }
 
 a.name:hover {
-	animation: tada;
+  animation: tada;
 }
 .container {
-	width:100%;
-	text-align:center;
+  width: 100%;
+  text-align: center;
 }
-@media screen and (max-height:220px) {
-.header {
-	display:none;
+@media screen and (max-height: 220px) {
+  .header {
+    display: none;
+  }
 }
-}
-@media screen and (min-height:221px) {
-.header {
-	width:100%;
-	top:33.3%;
-	left:0;
-	position:absolute;
-	margin-top:-4.3em;
-	font-family:Calibri,微软雅黑,Arial,sans-serif;
-	font-weight:bold;
-	color:#444;
-	text-shadow:0 2px 4px rgba(0,0,0,0.5);
-}
+@media screen and (min-height: 221px) {
+  .header {
+    width: 100%;
+    top: 33.3%;
+    left: 0;
+    position: absolute;
+    margin-top: -4.3em;
+    font-family: Calibri, 微软雅黑, Arial, sans-serif;
+    font-weight: bold;
+    color: #444;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
 }
 .tada {
 	-webkit-animation-duration: 1s;
@@ -220,233 +245,262 @@ a.name:hover {
 	animation-name: rubberBand;
 }
 .wave {
-	animation:wave 2s infinite;
-	-webkit-animation:wave 2s infinite;
+  animation: wave 2s infinite;
+  -webkit-animation: wave 2s infinite;
 }
-.wave:nth-child(1){
-	animation-delay:0.1s;
-	-webkit-animation-delay:0.1s;
+.wave:nth-child(1) {
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
 }
-.wave:nth-child(2){
-	animation-delay:0.3s;
-	-webkit-animation-delay:0.3s;
+.wave:nth-child(2) {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
 }
-.wave:nth-child(3){
-	animation-delay:0.5s;
-	-webkit-animation-delay:0.5s;
+.wave:nth-child(3) {
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
 }
-.wave:nth-child(4){
-	animation-delay:0.7s;
-	-webkit-animation-delay:0.7s;
+.wave:nth-child(4) {
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
 }
-.wave:nth-child(5){
-	animation-delay:0.9s;
-	-webkit-animation-delay:0.9s;
+.wave:nth-child(5) {
+  animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
 }
 .letter {
-	display:inline-block;
-	font-size:64px;
+  display: inline-block;
+  font-size: 64px;
 }
 #bgbtn {
-	top:0;
-	right:0;
-	position:absolute;
-	margin-top:12px;
-	margin-right:16px;
-	color:#666;
-	cursor:pointer;
-	-webkit-transition:color .3s;
-	transition:color .3s;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin-top: 12px;
+  margin-right: 16px;
+  color: #666;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 #bgbtn:hover {
-	color:#333;
+  color: #333;
 }
 #clbtn {
-	top:0;
-	right:0;
-	position:absolute;
-	margin-top:48px;
-	margin-right:16px;
-	color:#666;
-	cursor:pointer;
-	-webkit-transition:color .3s;
-	transition:color .3s;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin-top: 48px;
+  margin-right: 16px;
+  color: #666;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 #clbtn:hover {
-	color:#333;
+  color: #333;
 }
-@media screen and (max-width:420px) {
-#bgchanger {
-	top:-60px;
-	left:50%;
-	position:absolute;
-	margin-left:-7em;
-	padding:5px 0 10px 0;
-	height:40px;
-	width:220px;
-	border:1px solid rgba(0,0,0,.15);
-	border-top:none;
-	border-radius:0 0 5px 5px;
-	box-shadow:0 0 12px rgba(0,0,0,.175);
-	background-color:#fff;
-	-webkit-transition:all .3s;
-	transition:all .3s;
+#enginebtn {
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin-top: 84px;
+  margin-right: 16px;
+  color: #666;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
+#enginebtn:hover {
+  color: #333;
 }
-@media screen and (max-width:768px) and (min-width:421px){
-#bgchanger {
-	top:-60px;
-	left:50%;
-	position:absolute;
-	margin-left:-9.45em;
-	padding:5px 0 10px 0;
-	height:40px;
-	width:300px;
-	border:1px solid rgba(0,0,0,.15);
-	border-top:none;
-	border-radius:0 0 5px 5px;
-	box-shadow:0 0 12px rgba(0,0,0,.175);
-	background-color:#fff;
-	-webkit-transition:all .3s;
-	transition:all .3s;
+@media screen and (max-width: 420px) {
+  #bgchanger {
+    top: -60px;
+    left: 50%;
+    position: absolute;
+    margin-left: -7em;
+    padding: 5px 0 10px 0;
+    height: 40px;
+    width: 220px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.175);
+    background-color: #fff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
 }
+@media screen and (max-width: 768px) and (min-width: 421px) {
+  #bgchanger {
+    top: -60px;
+    left: 50%;
+    position: absolute;
+    margin-left: -9.45em;
+    padding: 5px 0 10px 0;
+    height: 40px;
+    width: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.175);
+    background-color: #fff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
 }
-@media screen and (min-width:769px) {
-#bgchanger {
-	top:-60px;
-	left:0;
-	position:absolute;
-	margin-left:33.3%;
-	padding:5px 0 10px 0;
-	height:40px;
-	width:33.3%;
-	border:1px solid rgba(0,0,0,.15);
-	border-top:none;
-	border-radius:0 0 5px 5px;
-	box-shadow:0 0 12px rgba(0,0,0,.175);
-	background-color:#fff;
-	-webkit-transition:all .3s;
-	transition:all .3s;
+@media screen and (min-width: 769px) {
+  #bgchanger {
+    top: -60px;
+    left: 0;
+    position: absolute;
+    margin-left: 33.3%;
+    padding: 5px 0 10px 0;
+    height: 40px;
+    width: 33.3%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.175);
+    background-color: #fff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  .content {
+    width: 33.3%;
+    top: 50%;
+    left: 0;
+    position: absolute;
+    margin-top: -1.3em;
+    margin-left: 33.3%;
+    padding-top: 5px;
+  }
 }
+@media screen and (max-width: 420px) {
+  #bgurl {
+    margin-top: 4px;
+    width: 180px;
+  }
 }
-@media screen and (max-width:420px) {
-#bgurl {
-	margin-top:4px;
-	width:180px;
-}
-}
-@media screen and (min-width:421px) {
-#bgurl {
-	margin-top:4px;
-}
+@media screen and (min-width: 421px) {
+  #bgurl {
+    margin-top: 4px;
+  }
 }
 #colorchanger {
-	display:none;
-	top:0;
-	right:0;
-	position:absolute;
-	margin-top:10px;
-	margin-right:56px;
-	border:1px solid rgba(0,0,0,.15);
-	border-radius:5px;
-	box-shadow:0 0 12px rgba(0,0,0,.175);
-	text-align:left;
-	background-color:#fff;
+  display: none;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin-top: 10px;
+  margin-right: 56px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.175);
+  text-align: left;
+  background-color: #fff;
 }
+
+#enginechanger {
+	display: none;
+	top: 84px;
+	right: 0;
+	position: absolute;
+	margin-right: 56px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.175);
+	text-align: left;
+	background-color: #fff;
+  }
 .list {
-	list-style:none;
-	margin:5px 0 10px 0;
-	padding:0 10px 0 10px;
+  list-style: none;
+  margin: 5px 0 10px 0;
+  padding: 0 10px 0 10px;
 }
 .list label {
-	font-size:13px;
+  font-size: 13px;
 }
 #setdefault {
-	width:50px;
-	margin-top:5px;
+  width: 50px;
+  margin-top: 5px;
 }
-@media screen and (max-width:768px) {
-.content {
-	width:300px;
-	top:50%;
-	left:50%;
-	position:absolute;
-	margin-top:-1.3em;
-	margin-left:-9.4em;
-	padding-top:5px;
+@media screen and (max-width: 768px) {
+  .content {
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-top: -1.3em;
+    margin-left: -9.4em;
+    padding-top: 5px;
+  }
 }
-}
-@media screen and (min-width:769px) {
-.content {
-	width:33.3%;
-	top:50%;
-	left:0;
-	position:absolute;
-	margin-top:-1.3em;
-	margin-left:33.3%;
-	padding-top:5px;
-}
-}
+
 .textarea {
-	height:24px;
-	width:90%;
-	padding:6px 12px;
-	font-size:16px;
-	border:1px solid #eee;
-	border-radius:4px;
-	-webkit-box-shadow:0 2px 8px rgba(0, 0, 0, .2);
-	box-shadow:0 2px 8px rgba(0, 0, 0, .2);
-	-webkit-transition:border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-	transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 24px;
+  width: 90%;
+  padding: 6px 12px;
+  font-size: 16px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transition: border-color ease-in-out 0.15s,
+    -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 .textarea:hover,
 .textarea:focus {
-	outline:0;
-	-webkit-box-shadow:0 2px 8px rgba(0, 0, 0, .5);
-	box-shadow:0 2px 8px rgba(0, 0, 0, .5);
+  outline: 0;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 .btn-box {
-	margin-top:20px;
+  margin-top: 20px;
 }
 .button {
-	padding:6px 12px;
-	font-size:16px;
-	color:#333;
-	background-color:#fff;
-	border:1px solid #ccc;
-	border-radius:4px;
-	cursor:pointer;
-	-webkit-transition:color .2s,background .2s;
-	transition:color .2s,background .2s;
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
 }
 .button:hover,
 .button:focus {
-	outline:0;
-	color:#333;
-	background-color:#eee;
-	border-color:#adadad;
+  outline: 0;
+  color: #333;
+  background-color: #eee;
+  border-color: #adadad;
 }
 .button:active {
-	outline:0;
-	color:#333;
-	background-color:#e6e6e6;
-	border-color:#adadad;
-	-webkit-box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);
-	box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);
+  outline: 0;
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-@media screen and (max-height:190px) {
-.footer {
-	display:none;
+@media screen and (max-height: 190px) {
+  .footer {
+    display: none;
+  }
 }
-}
-@media screen and (min-height:191px) {
-.footer {
-	height:30px;
-	width:100%;
-	bottom:0;
-	left:0;
-	position:absolute;
-	line-height:30px;
-	color:#fefefe;
-}
+@media screen and (min-height: 191px) {
+  .footer {
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    line-height: 30px;
+    color: #fefefe;
+  }
 }
