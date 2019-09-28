@@ -5,7 +5,7 @@
 没有什么卵用，可能仅仅是好看（如果你觉得它好看的话）
 
 # DEMO  
-[HUNT!](http://hunt.rhw-team.com/)
+[HUNT!](http://hunt.rockethcgs.me/)
 
 # 说明  
 - 可以改变页面背景图
@@ -14,4 +14,4 @@
 - 如果设置了背景图，颜色将被覆盖
 
 # Author  
-© [RocketHcgs](http://rockethcgs.me/), Released under the MIT License.
+© [RocketHcgs](https://rockethcgs.me/), Released under the MIT License.
