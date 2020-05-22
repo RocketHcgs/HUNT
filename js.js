@@ -104,18 +104,32 @@ function changeColor() {
 	setCookie("bgColor1", bgColor1, 180);
 	setCookie("bgColor2", bgColor2, 180);
 }
-
-//设置默认引擎
-function setDefaultEngine(engine) {
-	defaultEngine = engine;
-	setCookie("defaultEngine", engine, 180);
+//交换左右背景颜色
+function swapColor() {
+	var bgColor2 = document.getElementById("bgcolor1").value;
+	var bgColor1 = document.getElementById("bgcolor2").value;
+	if (getCookie("bgurl") == "") {
+		document.body.style = "background:linear-gradient(to right," + bgColor1 + "," + bgColor2 + ");";
+		document.getElementsByTagName("meta")[2].content = bgColor1;
+	}
+	document.getElementById("bgcolor1").value = bgColor1;
+	document.getElementById("bgcolor2").value = bgColor2;
+	setCookie("bgColor1", bgColor1, 180);
+	setCookie("bgColor2", bgColor2, 180);
 }
 //设为默认颜色
 function setDefault() {
 	document.body.style = "background:linear-gradient(to right,#f76b1d,#fad961);";
 	document.getElementsByTagName("meta")[2].content = "#f8a240";
+	document.getElementById("bgcolor1").value = "#f76b1d";
+	document.getElementById("bgcolor2").value = "#fad961";
 	setCookie("bgColor1", "", -1);
 	setCookie("bgColor2", "", -1);
+}
+//设置默认引擎
+function setDefaultEngine(engine) {
+	defaultEngine = engine;
+	setCookie("defaultEngine", engine, 180);
 }
 
 window.onload = function () {

@@ -423,7 +423,7 @@ a.name:hover {
 .list label {
   font-size: 13px;
 }
-#setdefault {
+#swap, #setdefault {
   width: 50px;
   margin-top: 5px;
 }
